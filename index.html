@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio IE 2025</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Franja superior -->
+  <div class="franja-superior"></div>
+
+  <!-- Menú lateral -->
+  <div id="menu-lateral" class="menu-lateral">
+    <button id="cerrar-menu" class="boton-cerrar">&times;</button>
+    <ul>
+      <li><a href="https://wiki.ead.pucv.cl/Imagen_Escrita_2025" target="_blank">Imagen Escrita</a></li>
+      <li><a href="https://wiki.ead.pucv.cl/Josefa_Gonz%C3%A1lez" target="_blank">Otros Proyectos</a></li>
+    </ul>
+    <div class="footer-slide">Josefa González 2025</div>
+  </div>
+
+  <!-- Botón abrir menú -->
+  <button id="abrir-menu" class="boton-menu">&#9776;</button>
+
+  <header>
+    <h1 class="titulo-principal">Portafolio IE 2025</h1>
+    <div class="descripcion">
+      <p><strong>Imagen Escrita</strong> es una asignatura que se centra en la intersección entre diseño, programación y arte generativo. Utilizando <code>p5.js</code> como herramienta principal, el curso explora los fundamentos de la programación creativa y su aplicación en el diseño visual interactivo.</p>
+      <p>A través del <em>creative coding</em>, se enfatiza el pensamiento computacional como herramienta de diseño, fomentando un enfoque innovador en la resolución de problemas visuales y la creación artística. La integración de herramientas de IA busca ampliar las posibilidades creativas y técnicas, sirviendo como complemento al proceso de diseño y programación.</p>
+      <a href="https://wiki.ead.pucv.cl/Sitio_Web_IE_-_Josefa_gonz%C3%A1lez" target="_blank" class="boton-wiki">wiki del proyecto</a>
+    </div>
+  </header>
+
+  <section id="proyectos" class="seccion-proyectos">
+    <h2 class="titulo-seccion">Mis proyectos p5.js</h2>
+    <div class="tarjetas">
+
+      <!-- Tarea 1 -->
+      <a href="https://wiki.ead.pucv.cl/Encargo_1_IE_-_The_colour_and_the_shape/Josefa_Gonz%C3%A1lez" class="tarjeta" target="_blank">
+        <iframe src="https://editor.p5js.org/josefa.gonzalez.a/embed/roYHKc0Qg" title="Tarea 1"></iframe>
+        <h3>Encargo 1</h3>
+        <p>The Colour and the Shape</p>
+      </a>
+
+      <!-- Tarea 2 -->
+      <a href="https://wiki.ead.pucv.cl/Encargo_2_IE_-_Josefa_Gonz%C3%A1lez" class="tarjeta" target="_blank">
+        <iframe src="https://editor.p5js.org/josefa.gonzalez.a/embed/aJFaWcIVX" title="Tarea 2"></iframe>
+        <h3>Encargo 2</h3>
+        <p>Green Stuff</p>
+      </a>
+
+      <!-- Tarea 3 -->
+      <a href="https://wiki.ead.pucv.cl/Encargo_3_IE_-_Josefa_Gonz%C3%A1lez" class="tarjeta" target="_blank">
+        <iframe src="https://editor.p5js.org/josefa.gonzalez.a/embed/W4K_j4o7N" title="Tarea 3"></iframe>
+        <h3>Encargo 3</h3>
+        <p>Mad Stars</p>
+      </a>
+
+      <!-- Tarea 4 -->
+      <a href="https://wiki.ead.pucv.cl/Encargo_4_IE_-_Josefa_Gonz%C3%A1lez" class="tarjeta" target="_blank">
+        <iframe src="https://editor.p5js.org/josefa.gonzalez.a/embed/At-mx7rUM" title="Tarea 4"></iframe>
+        <h3>Encargo 4</h3>
+        <p>Entrelazos</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Librería p5.js y burbujas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+  <script src="Burbujas.js"></script>
+
+  <!-- JS menú -->
+  <script>
+    const abrirMenu = document.getElementById('abrir-menu');
+    const cerrarMenu = document.getElementById('cerrar-menu');
+    const menuLateral = document.getElementById('menu-lateral');
+
+    cerrarMenu.style.display = 'none';
+
+    abrirMenu.addEventListener('click', () => {
+      menuLateral.style.width = '250px';
+      cerrarMenu.style.display = 'block';
+      abrirMenu.style.display = 'none';
+    });
+
+    cerrarMenu.addEventListener('click', () => {
+      menuLateral.style.width = '0';
+      cerrarMenu.style.display = 'none';
+      abrirMenu.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
+
+
+

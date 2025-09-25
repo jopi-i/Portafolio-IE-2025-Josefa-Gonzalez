@@ -1,0 +1,85 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(180deg, #b9fbc0, #a6e9f0);
+  display: flex; flex-direction: column; align-items: center;
+  padding: 0 20px; min-height: 100vh; color: #1f2937; position: relative;
+}
+
+canvas { position: fixed !important; top:0; left:0; z-index:-1; }
+
+/* Franja superior */
+.franja-superior { width:100%; height:50px; background-color:#34d399; position:fixed; top:0; left:0; z-index:1000; }
+
+/* Menú lateral */
+.menu-lateral {
+  height:100%; width:0; max-width:80%; position:fixed; top:0; left:0;
+  background-color:#064663; overflow-x:hidden; transition:width 0.5s; padding-top:60px; z-index:1100;
+}
+
+.menu-lateral ul { list-style:none; padding:0 20px; }
+.menu-lateral ul li { margin:20px 0; }
+.menu-lateral ul li a { color:white; text-decoration:none; font-size:1.2rem; transition:color 0.3s; }
+.menu-lateral ul li a:hover { color:#34d399; }
+
+/* Footer en menú */
+.footer-slide {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #34d399;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Botones menú */
+.boton-menu, .boton-cerrar {
+  background-color:#34d399; border:none; color:white;
+  padding:12px 20px; font-size:24px; cursor:pointer; border-radius:8px;
+  transition: background-color 0.3s; z-index:1200; position:fixed;
+}
+.boton-menu:hover, .boton-cerrar:hover { background-color:#059669; }
+.boton-menu { top:10px; left:10px; }
+.boton-cerrar { top:10px; right:10px; display:none; }
+
+/* Header */
+header { margin-top:70px; position:relative; z-index:10; }
+.titulo-principal { font-size:2.5rem; font-weight:bold; color:#064663; text-align:center; margin-bottom:30px; text-shadow:0 2px 6px rgba(0,0,0,0.2); }
+.descripcion { background: rgba(255,255,255,0.8); padding:30px; border-radius:20px; max-width:800px; text-align:justify; line-height:1.6; box-shadow:0 8px 20px rgba(0,0,0,0.15); margin-bottom:40px; backdrop-filter:blur(10px); }
+.descripcion p { margin-bottom:15px; }
+
+/* Botón wiki */
+.boton-wiki { display:inline-block; background:linear-gradient(135deg,#34d399,#3b82f6); color:white; padding:12px 25px; border-radius:30px; text-decoration:none; font-weight:bold; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.boton-wiki:hover { transform:scale(1.05); box-shadow:0 6px 20px rgba(0,0,0,0.25); }
+
+/* Sección proyectos */
+.seccion-proyectos { width:100%; max-width:1000px; margin-top:20px; }
+.titulo-seccion { background: linear-gradient(135deg,#6ee7b7,#3b82f6); color:white; padding:15px 40px; border-radius:40px; text-align:center; font-size:1.8rem; font-weight:bold; box-shadow:0 6px 20px rgba(0,0,0,0.25); margin-bottom:40px; position:relative; z-index:10; }
+
+/* Tarjetas */
+.tarjetas { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; position:relative; z-index:10; }
+.tarjeta { background: rgba(255,255,255,0.7); padding:20px; border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.15); text-decoration:none; color:inherit; backdrop-filter:blur(8px) saturate(180%); border:1px solid rgba(255,255,255,0.4); transition: transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; }
+.tarjeta:hover { transform:translateY(-5px) scale(1.03); box-shadow:0 10px 25px rgba(0,0,0,0.25); }
+.tarjeta iframe { width:100%; height:200px; border:none; border-radius:15px; margin-bottom:15px; }
+.tarjeta h3 { color:#2563eb; margin-bottom:5px; }
+.tarjeta p { color:#374151; font-size:0.95rem; text-align:center; }
+
+/* Responsive */
+@media screen and (max-width:768px) {
+  .tarjetas { grid-template-columns:1fr; gap:20px; }
+  .franja-superior { height:40px; }
+  .titulo-principal { font-size:2rem; }
+  .titulo-seccion { font-size:1.5rem; padding:12px 20px; }
+  .descripcion { padding:20px; }
+  .boton-menu, .boton-cerrar { padding:10px 16px; font-size:20px; }
+  .menu-lateral { max-width:80%; }
+}
+@media screen and (max-width:480px){
+  .tarjeta iframe { height:220px; }
+}
